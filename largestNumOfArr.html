@@ -1,0 +1,20 @@
+<!--  Find the Largest Number in an Array -->
+
+<script>
+  function largestNumArr(arr) {
+    // return arr.reduce((acc, curr) => (acc > curr ? acc : curr), 0);  //using reduce
+    let largestNum = 0;
+    let initialVal = 0;
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[initialVal] > arr[i]) {
+        largestNum = arr[initialVal];
+      } else {
+        largestNum = arr[i];
+      }
+      initialVal++
+    }
+    return largestNum;
+  }
+
+  console.log(largestNumArr([15, 2, 35, 4]));
+</script>
