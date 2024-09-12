@@ -1,0 +1,14 @@
+<!-- Generate the Fibonacci series up to n terms. // [0, 1, 1, 2, 3, 5, 8]-->
+<script>
+  function fibonacci(n) {
+    let num1 = 0, num2 = 1, feboNum = []
+    for (let i = 0; i<n; i++){
+        feboNum.push(num1)
+        let nextNum = num1 + num2;
+        num1 = num2
+        num2 = nextNum
+    }
+    return feboNum
+  }
+  console.log(fibonacci(3));
+</script>
