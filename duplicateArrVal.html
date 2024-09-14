@@ -1,13 +1,17 @@
 <!-- Find the Duplicates in an Array -->
  <script>
     function duplicateArrVal(arr){
-        let newArr = []
-        for(let i = 0; i< arr.length; i++){
-            if(arr.includes(i)){
-                newArr
-            }
-        }
+     let newArr = new Set()
+     let duplicateArr = new Set()
 
+     for(let i = 0; i< arr.length; i++){
+        if(newArr.has(arr[i])){
+            duplicateArr.add(arr[i])
+        }else{
+            newArr.add(arr[i])
+        }
+     }
+     return duplicateArr
     }
-    console.log(duplicateArrVal([1,2,5,1,5,2,4,3,6,6]))
+    console.log(duplicateArrVal([1,2,5,1,5,2,4,3,6,3,6]))
  </script>
