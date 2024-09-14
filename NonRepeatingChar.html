@@ -2,18 +2,19 @@
 
 <script>
   function nonRepeatingChar(str) {
-    let charStr = {};
+    let charCount = {}
 
-    for (let char of str) {
-      charStr[char] = (charStr[char] || 0) + 1;
+    for(let char of str){
+        charCount[char] = (charCount[char] || 0) + 1
     }
 
-    for (let char of str) {
-      if (charStr[char] === 1) {
-        return char;
-      }
+    for(let char of str){
+        if(charCount[char] === 1){
+            return char
+        }
     }
-    return null;
+
+    return null
   }
   console.log(nonRepeatingChar("swiss")); // output: w
 </script>

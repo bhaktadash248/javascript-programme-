@@ -1,0 +1,16 @@
+<!-- 
+ Rotate the elements of an array to the right by k steps.
+ output: rotateArray([1, 2, 3, 4, 5], 2)); // [4, 5, 1, 2, 3] 
+ -->
+<script>
+  function rotateAnArray(arr, k) {
+     k = k % arr.length;
+     for(let i = 0; i< k; i++){
+        arr.unshift(arr.pop())  // array.unshift add the last element to the initial point and
+                                // array .pop removes the last element
+     }
+    
+    return arr
+  }
+  console.log(rotateAnArray([1, 2, 3, 4, 5],3));
+</script>
