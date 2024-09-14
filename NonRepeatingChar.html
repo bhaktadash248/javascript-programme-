@@ -1,0 +1,19 @@
+<!-- Find the First Non-Repeating Character -->
+
+<script>
+  function nonRepeatingChar(str) {
+    let charStr = {};
+
+    for (let char of str) {
+      charStr[char] = (charStr[char] || 0) + 1;
+    }
+
+    for (let char of str) {
+      if (charStr[char] === 1) {
+        return char;
+      }
+    }
+    return null;
+  }
+  console.log(nonRepeatingChar("swiss")); // output: w
+</script>
